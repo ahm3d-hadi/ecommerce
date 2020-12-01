@@ -8,6 +8,14 @@ from .utils import cookieCart, cartData, guestOrder
 
 # Create your views here.
 
+def index(request):
+    data = cartData(request)
+    cartItems = data['cartItems']
+
+    products = Product.objects.all()
+    context = {'products': products, 'cartItems': cartItems}
+    return render(request, 'store/index.html', context)
+
 def store(request):
     data = cartData(request)
     cartItems = data['cartItems']
