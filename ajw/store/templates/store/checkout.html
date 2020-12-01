@@ -115,14 +115,14 @@
 		}
 
 		if(shipping != 'False') {
-			shippingInfo.address = form.address.Value
-			shippingInfo.city = form.city.Value
-			shippingInfo.state = form.state.Value
-			shippingInfo.zipcode = form.zipcode.Value
+			shippingInfo.address = form.address.value
+			shippingInfo.city = form.city.value
+			shippingInfo.state = form.state.value
+			shippingInfo.zipcode = form.zipcode.value
 		}
 		if(user == 'AnonymousUser') {
-			userFormData.name = form.name.Value
-			userFormData.email = form.email.Value
+			userFormData.name = form.name.value
+			userFormData.email = form.email.value
 		}
 
 		var url = '/process_order/'
